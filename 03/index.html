@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>JavaScript 03</title>
+	</head>
+	<body>
+		<h1>2nd and 3rd largest numbers in the given array. For ex: input = [3, 6, 2, 9, 1, 32, 97, -1, 5]; output = 32, 9</h1>
+
+		<h2>Answer: </h3>	
+		<h3>Input Array: </h3>
+		<p id="input"></p>
+		<h3>Output Array: </h3>
+		<p id="output"></p>
+		<h3>2nd Largest Number: </h3>
+		<p id="outputOne"></p>
+		<h3>3rd Largest Number: </h3>
+		<p id="outputTwo"></p>
+
+		<script>
+			var inputArr = [3, 6, 2, 9, 1, 32, 97, -1, 5];
+			document.getElementById("input").innerHTML = inputArr;
+
+			var maxVal = Math.max.apply( Math, inputArr);
+
+			inputArr.splice(inputArr.indexOf(maxVal), 1);
+
+			maxVal = Math.max.apply( Math, inputArr);
+			document.getElementById("outputOne").innerHTML = maxVal;
+
+			inputArr.splice(inputArr.indexOf(maxVal), 1);
+
+			maxVal = Math.max.apply( Math, inputArr);
+			document.getElementById("outputTwo").innerHTML = maxVal;
+	
+			document.getElementById("output").innerHTML = inputArr;
+		</script>
+	</body>
+</html>
