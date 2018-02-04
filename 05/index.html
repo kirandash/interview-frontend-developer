@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>JavaScript 05</title>
+	</head>
+	<body>
+		<h1>Given a numbered string like "8639412" convert it into a sorted string like "1234689"</h1>
+
+		<h2>Answer: </h3>	
+		<h3>Input String: </h3>
+		<p id="input"></p>
+		<h3>Output: </h3>
+		<p id="output"></p>
+
+		<script>
+			var inputStr = "8639412";
+			
+			document.getElementById("input").innerHTML = inputStr;
+
+			var inputStrArr = inputStr.split("");
+			inputStrArr.sort();
+			
+			var outputStr = inputStrArr.join("");
+
+			document.getElementById("output").innerHTML = outputStr;
+		</script>
+	</body>
+</html>
