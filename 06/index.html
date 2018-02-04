@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>JavaScript 06</title>
+	</head>
+	<body>
+		<h1>Sum method sum(2,3); sum(2)(3) where both will return 5.</h1>
+
+		<h2>Answer: With closure & check undefined var</h3>	
+		<h3>Fn 1st output: </h3>
+		<p id="fn1Output"></p>
+		<h3>Fn 2nd Output: </h3>
+		<p id="fn2Output"></p>
+
+		<script>
+			function sum(a, b) {
+				if(typeof b === "undefined"){
+					return function(c){
+						return a + c;
+					}
+				}
+				return a + b;
+			}
+
+			var result1 = sum(2,3);
+			var result2 = sum(2)(3);
+			
+			document.getElementById("fn1Output").innerHTML = result1;
+			document.getElementById("fn2Output").innerHTML = result2;
+		</script>
+	</body>
+</html>
