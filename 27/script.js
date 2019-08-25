@@ -17,7 +17,7 @@
     }
     profile1.getName();
 
-    // Solution 2: without replacing fat arrow fn
+    // Solution 2: without replacing fat arrow fn - Can not be done. this inside arrow function will always point to outer scope which here is window
     const profile2 = {
         name: 'Kiran Dash',
         getName: () => {
