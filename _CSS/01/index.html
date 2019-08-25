@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>01. Shadow DOM with element.createShadowRoot()</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h3>01. Shadow DOM with element.createShadowRoot()</h3>
+        <div id="shadow-host">
+            <span id="child">
+                This is not part of the shadow DOM
+            </span>
+        </div>
+        <template id="news-widget">
+            <style type="text/css">
+                h3 {
+                    color: green;
+                }
+            </style>
+            <h3>News Widget</h3>
+        </template>
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>
