@@ -1,4 +1,3 @@
-What is the difference between classes and IDs in CSS?
 What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
 Describe Floats and how they work.
 Describe z-index and how stacking context is formed.
