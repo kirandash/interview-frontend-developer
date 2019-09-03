@@ -38,3 +38,8 @@ What is this?
 Meaning depends on context.
 Can be redefined using bind()
 Ex: return { .... }.bind(this)
+
+## 4. AJAX to load an External file
+1. Asynchronous
+2. XMLHttpRequest();
+3. open(), send(), onreadystatechange()

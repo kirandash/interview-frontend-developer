@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>04. AJAX XMLHttpRequest</title>
+    </head>
+    <body>
+        <h2>4. AJAX to load an External file</h2>
+        <script type="text/javascript">
+            var request = new XMLHttpRequest(); // Imp
+
+            request.open("GET", "MOCK_DATA.json"); // Imp
+
+            request.onreadystatechange = function(){ // Imp
+                if(request.status == 200 && request.readyState == 4){
+                    console.log(request);
+                    console.log(JSON.parse(request.responseText));
+                }
+            };
+
+            request.send(); // Imp
+        </script>
+    </body>
+</html>
