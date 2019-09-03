@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>02. jQuery</title>
+    </head>
+    <body>
+        <h2>2. Are you comfortable using jQuery?</h2>
+        <div>
+            <ul id="target"></ul>
+            <button>Load JSON</button>
+        </div>
+        <script
+        src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            $(function(){
+                $("button").on("click", function(item){
+                    $.ajax({
+                        method: "GET",
+                        url: "MOCK_DATA.json",
+                        dataType: "json"
+                    }).done(function(data){
+                        $("ul").html("");
+                        $.each(data, function(key, val){
+                            $("ul").append(`<li>${val.first_name}</li>`);
+                        }); // each
+                    }); // ajax
+                }); // click
+            }); //jQuery IIFE
+        </script>
+    </body>
+</html>
