@@ -43,3 +43,8 @@ Ex: return { .... }.bind(this)
 1. Asynchronous
 2. XMLHttpRequest();
 3. open(), send(), onreadystatechange()
+
+## 5. Have you used JavaScript templates?
+1. Many Options
+2. EJS: embedded JS templates e.g. canjs
+3. <% %>
