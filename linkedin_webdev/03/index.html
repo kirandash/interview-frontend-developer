@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>03. bind and this</title>
+    </head>
+    <body>
+        <h2>3. Describe when you should use the bind() method</h2>
+        <script type="text/javascript">
+            var myModule = {
+                name: 'Kiran',
+                getName: function(){
+                    return console.log(this.name);
+                }
+            };
+            myModule.getName(); // Here method is being used from objects name so object myModule is taken as reference
+            var someName = myModule.getName.bind({name:"Bulbul"}); // Here the custom object is being bind
+            someName();
+            var someName2 = myModule.getName;
+            someName2(); // Here object is window, thus window object.name will be the output. probably empty
+            var someName3 = myModule.getName.bind(myModule);
+            someName3();
+        </script>
+    </body>
+</html>

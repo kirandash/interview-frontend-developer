@@ -31,3 +31,10 @@ $(function(){
         }); // ajax
     }); // click
 }); //jQuery IIFE
+
+## 3. Describe when you should use the bind() method
+Binding:
+What is this?
+Meaning depends on context.
+Can be redefined using bind()
+Ex: return { .... }.bind(this)
