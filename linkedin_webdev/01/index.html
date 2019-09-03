@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Data Attribute</title>
+        <style>
+            .tooltip::before {
+                content: attr(data-tooltip); /* Imp */
+            }
+            .tooltip[data-color="black"] {
+                color: black;
+            }
+            .tooltip[data-color="red"] {
+                color: red;
+            }
+            .tooltip[data-color="blue"] {
+                color: blue;
+            }
+            .tooltip[data-color="pink"] {
+                color: pink;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>How do you use the data- attribute in HTML?</h2>
+        <div>
+            <button class="btn tooltip" data-tooltip="One" data-color="black">button 1</button>
+            <button class="btn tooltip" data-tooltip="Two" data-color="red" data-click-display="block">button 2</button>
+            <button class="btn tooltip" data-tooltip="Three" data-color="blue" data-click-display="none">button 3</button>
+            <button class="btn tooltip" data-tooltip="Four" data-color="pink">button 4</button>
+        </div>
+        <script type="text/javascript">
+            let buttons = document.querySelectorAll(".tooltip");
+            buttons.forEach(function(item){
+                item.addEventListener('click', function(){
+                    if(item.dataset.clickDisplay){
+                        item.style.display = item.dataset.clickDisplay;
+                    }
+                }, false);
+            });
+        </script>
+    </body>
+</html>
