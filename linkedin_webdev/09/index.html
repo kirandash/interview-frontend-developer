@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>9. How do you use arrow functions in ES6?</title>
+        <style>
+            .hidden {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>9. How do you use arrow functions in ES6?</h2>
+        <!--Top Menu-->
+        <div class="topmenu">
+            <button class="burger">Top Menu</button>
+            <ul><li>Item 1</li><li>Item 2</li><li>Item 3</li><li>Item 4</li><li>Item 5</li></ul>
+        </div>
+        <!--Bottom Menu-->
+        <div class="bottommenu">
+            <button class="bottom-burger">Bottom Menu</button>
+            <ul><li>Item 1</li><li>Item 2</li><li>Item 3</li><li>Item 4</li><li>Item 5</li></ul>
+        </div>
+        <script type="text/javascript">
+            (function(){
+                // Constructor
+                let Menu = (selector) => {
+                    let menu = document.querySelector(selector);
+                    return {
+                        activateToggle: () => menu.addEventListener("click", () => menu.parentNode.querySelector("ul").classList.toggle("hidden")),
+                        default: () => menu.parentNode.querySelector("ul").classList.add("hidden")
+                    }
+                }
+
+                let topMenu = Menu(".burger"); // new keyword should not be used with arrow functions since these are not constructor functions but builder functions
+                topMenu.default();
+                topMenu.activateToggle();
+                let bottomMenu = Menu(".bottom-burger");
+                bottomMenu.activateToggle();
+            })();
+        </script>
+    </body>
+</html>

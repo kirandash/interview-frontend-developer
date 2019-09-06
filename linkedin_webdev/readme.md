@@ -62,3 +62,14 @@ How constructors work?
 3. Function methods
 
 Create your own menu toggle with constructor
+
+## 9. How do you use arrow functions in ES6?
+Arrow Functions:
+1. ES6 Shortcuts for anonymous functions.
+Ex: 'click', function(e){} 
+or let add = function(){} etc.
+2. Implicit returns : if only one arguments
+3. No curly braces if just one line
+4. Parameter rules: (a,b,c) or just a =>  with out paranthesis if only one parameter
+5. Doesn't bind this
+6. new can not be used. So just drop the new.
