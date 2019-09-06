@@ -54,3 +54,11 @@ Ex: return { .... }.bind(this)
 2. Managing nodes: innerHTML, createElement(), appendChild(), addEventListener()
 
 ## 7. How do you search using functional programming?
+
+## 8. How do you use a constructor to create instances?
+How constructors work?
+1. Using objects
+2. Objects & closures
+3. Function methods
+
+Create your own menu toggle with constructor

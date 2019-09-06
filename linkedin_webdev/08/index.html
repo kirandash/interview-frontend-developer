@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>8. How do you use a constructor to create instances?</title>
+        <style>
+            .hidden {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>8. How do you use a constructor to create instances?</h2>
+        <!--Top Menu-->
+        <div class="topmenu">
+            <button class="burger">Top Menu</button>
+            <ul><li>Item 1</li><li>Item 2</li><li>Item 3</li><li>Item 4</li><li>Item 5</li></ul>
+        </div>
+        <!--Bottom Menu-->
+        <div class="bottommenu">
+            <button class="bottom-burger">Bottom Menu</button>
+            <ul><li>Item 1</li><li>Item 2</li><li>Item 3</li><li>Item 4</li><li>Item 5</li></ul>
+        </div>
+        <script type="text/javascript">
+            (function(){
+                // Constructor
+                function Menu(selector){
+                    let menu = document.querySelector(selector);
+                    return {
+                        activateToggle: function(){
+                            menu.addEventListener("click", function(){
+                                menu.parentNode.querySelector("ul").classList.toggle("hidden");
+                            });
+                        },
+                        default: function(){
+                            menu.parentNode.querySelector("ul").classList.add("hidden");
+                        }
+                    }
+                }
+
+                let topMenu = new Menu(".burger");
+                topMenu.default();
+                topMenu.activateToggle();
+                let bottomMenu = new Menu(".bottom-burger");
+                bottomMenu.activateToggle();
+            })();
+        </script>
+    </body>
+</html>
