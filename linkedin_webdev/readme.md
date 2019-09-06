@@ -52,3 +52,5 @@ Ex: return { .... }.bind(this)
 ## 6. How do you manipulate the DOM?
 1. Accessing DOM: getElementById(), getElementsByClassName(), getElementsByTagName(), querySelector(), querySelectorAll()
 2. Managing nodes: innerHTML, createElement(), appendChild(), addEventListener()
+
+## 7. How do you search using functional programming?

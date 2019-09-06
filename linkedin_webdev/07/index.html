@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>07. Filter with functional programming</title>
+    </head>
+    <body>
+        <h2>07. How do you search using functional programming?</h2>
+        <script type="text/javascript">
+            (function(){
+                // Filter all males from json data
+                var request = new XMLHttpRequest();
+                request.open("GET", "MOCK_DATA.json");
+                request.onreadystatechange = function(){
+                    if(request.status == 200 && request.readyState == 4){
+                        data = JSON.parse(request.responseText);
+                        console.log(filterData(data, "gender", "Male"));
+                    }
+                }
+                request.send();
+                // Functional programming - best way instead of regular loops
+                function filterData(data, param, val){
+                    return data.filter(function(item, idx, array){
+                        return item[param] === val;
+                    });
+                }
+            })();
+        </script>
+    </body>
+</html>
