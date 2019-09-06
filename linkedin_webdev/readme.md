@@ -48,3 +48,7 @@ Ex: return { .... }.bind(this)
 1. Many Options
 2. EJS: embedded JS templates e.g. canjs
 3. <% %>
+
+## 6. How do you manipulate the DOM?
+1. Accessing DOM: getElementById(), getElementsByClassName(), getElementsByTagName(), querySelector(), querySelectorAll()
+2. Managing nodes: innerHTML, createElement(), appendChild(), addEventListener()

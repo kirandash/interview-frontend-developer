@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>6. How do you manipulate the DOM?</title>
+    </head>
+    <body>
+        <h2>6. How do you manipulate the DOM?</h2>
+        <div class="boxes"></div>
+        <script type="text/javascript">
+            // Create 20 boxes with different colors and on click hide the current div
+            (function(){
+                let boxesWrapper = document.querySelector(".boxes");
+                let colors = ['red', 'blue', 'black', 'green', 'pink', 'grey', 'yellow', 'orange'];
+                let currColor = 0;
+                function createBoxes(boxcount){
+                    for(i=0; i< boxcount; i++){
+                        let box = document.createElement('div'); // Create div for box
+                        box.style = `float: left; width: 100px; height: 100px; margin: 20px;`
+                        if(currColor == colors.length) currColor = 0;
+                        box.style.backgroundColor = colors[currColor];
+                        currColor++;
+                        boxesWrapper.appendChild(box); // Append the child div to parent
+
+                        // Adding click event to box
+                        /*box.addEventListener("click", function(e){
+
+                        }); Don't add event listener here since it will be adding multiple listeners on our page rather use event propagation */
+                    }
+                    boxesWrapper.addEventListener("click", function(e){
+                       //  e.target.style.display = "none";
+                       e.target.parentNode.removeChild(e.target);
+                    }, false); // false: for proper bubbling
+                }
+                createBoxes(24);
+            })();// IIFE
+        </script>
+    </body>
+</html>
