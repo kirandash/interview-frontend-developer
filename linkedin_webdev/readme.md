@@ -143,3 +143,9 @@ Strict Mode. Some browsers allow to set it.
 Other Features:
 1. Invalid assignments e.g undefined
 2. Property and params e.g. duplicates etc will throw error
+
+## 18. What is a callback and how do you use it?
+Callbacks:
+1. Executed asynchronously
+2. Often tied to events
+3. Uses anonymous functions

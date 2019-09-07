@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>18. What is a callback and how do you use it?</title>
+        <style>
+            body {
+                background: orange;
+            }
+            .boxes {
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                width: 100vw;
+                height: 100vh;
+            }
+            .box {
+                background: red;
+                width: 100px;
+                height: 100px;
+                margin: 20px;
+            }
+            .box.active {
+                background: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>18. What is a callback and how do you use it?</h2>
+        <div class="boxes">
+            <div class="box box1"></div>
+            <div class="box box2"></div>
+            <div class="box box3"></div>
+            <div class="box box4"></div>
+            <div class="box box5"></div>
+        </div>
+        <script type="text/javascript">
+            (function(){
+                let boxesNode = document.querySelector(".boxes");
+                boxesNode.addEventListener("click", function(e){
+                    // Callback function
+                    e.target.classList.toggle("active");
+                }, false);
+            })();
+        </script>
+    </body>
+</html>
