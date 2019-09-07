@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>16. What are event bubbling and propagation about?</title>
+        <style>
+            body {
+                background: orange;
+            }
+            .boxes {
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                width: 100vw;
+                height: 100vh;
+            }
+            .box {
+                background: red;
+                width: 100px;
+                height: 100px;
+                margin: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>16. What are event bubbling and propagation about?</h2>
+        <div class="boxes">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box" id="special"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <script type="text/javascript">
+            (function(){
+                let node = document.querySelector(".boxes");
+                node.addEventListener("click", function(e){
+                    console.log(e);
+                    if(e.target.className === "box"){
+                        e.target.parentNode.removeChild(e.target);
+                    }
+                }, false); // if true, this will be triggered before the second event
+                let node2 = document.querySelector("#special");
+                node2.addEventListener("click", function(e){
+                    console.log("id clicked" + e);
+                    e.target.style = `background-color: yellow`;
+                    e.stopPropagation(); // Only this event will be triggered and the first one will not but if propagation parameter is made true for first case, then both will be triggered
+                }, false);
+            })();
+        </script>
+    </body>
+</html>

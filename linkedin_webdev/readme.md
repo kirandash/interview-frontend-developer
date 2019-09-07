@@ -124,3 +124,10 @@ Error detection for:
 2. JavaScript
 3. CSS/SASS/LESS/PostCSS
 4. Frameworks
+
+## 16. What are event bubbling and propagation about?
+Event Propagation:
+1. addEventListener(name, callback, propagation) Ex: addEventListener('click', function(){}, false);
+propagation: true/false : direction of event propagation. false = event captured at e.target and then it goes up
+2. Capturing/Bubbling
+3. stopPropagation() : to prevent event bubbling in the DOM
