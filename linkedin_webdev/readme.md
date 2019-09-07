@@ -131,3 +131,15 @@ Event Propagation:
 propagation: true/false : direction of event propagation. false = event captured at e.target and then it goes up
 2. Capturing/Bubbling
 3. stopPropagation() : to prevent event bubbling in the DOM
+
+## 17. What does "use strict" do?
+Strict Mode. Some browsers allow to set it.
+1. 'use strict';
+2. strict vs sloppy mode
+3. no var declaration will throw error in strict mode, in sloppy mode it will automatically create for you
+4. Place 'use strict' inside IIFE not globally or else some browsers will throw error. Since placing globally might affect other js code in our project
+5. Better to 'use strict' at function level where you want instead of whole script
+
+Other Features:
+1. Invalid assignments e.g undefined
+2. Property and params e.g. duplicates etc will throw error
