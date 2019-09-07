@@ -101,3 +101,6 @@ IIFE: Immediately invoked function expression = anonymous function + wrapping pa
 2. So, immutability is a concept of writing functional program in such a way that the value of original data does not change.
 3. For example: using map instead of forEach to protect data of array from being changed.
 Or clone objects or arrays so that it does not effect the main instance.
+
+## 14. How would you use of JavaScript reduce()?
+Functional programming way : To find sum of items of an arrow
