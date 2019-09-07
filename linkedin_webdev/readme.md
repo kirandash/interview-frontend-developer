@@ -82,3 +82,11 @@ Using Fetch:
 4. Parse formats
 5. Lot simpler than XMLHttpRequest()
 
+## 11. How do your render JSON to a DOM element?
+JSON:
+1. JavaScript Object Notation
+2. Based on JavaScript objects
+3. language independent
+4. Easy to read and parse
+Tool to visualize JSON in better format:
+https://jsoneditoronline.org/

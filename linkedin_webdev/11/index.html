@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>11. How do your render JSON to a DOM element?</title>
+    </head>
+    <body>
+        <h2>11. How do your render JSON to a DOM element?</h2>
+        <div data-target="employees"></div>
+        <script type="text/javascript">
+            (function(){
+                var node, data;
+                node = document.querySelector("div[data-target='employees']");
+                var request = new XMLHttpRequest();
+                request.open("GET", "MOCK_DATA.json");
+                request.onreadystatechange = function(){
+                    if(request.status == 200 && request.readyState == 4){
+                        data = JSON.parse(request.responseText);
+                        populateNode(data, node);
+                    }
+                }
+                request.send();
+                function populateNode(data, node){
+                    for(key in data){
+                        if(data.hasOwnProperty(key)){
+                            let employeeNode = document.createElement('div');
+                            employeeNode.className = `employee employee-${key}`;
+                            employeeNode.innerHTML = `<h3>${data[key].first_name} ${data[key].last_name}</h3><p>${data[key].email}</p>`;
+                            node.appendChild(employeeNode);
+                        }
+                    }
+                }
+            })();
+        </script>
+    </body>
+</html>
