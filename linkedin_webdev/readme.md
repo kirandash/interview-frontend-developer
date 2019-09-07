@@ -104,3 +104,23 @@ Or clone objects or arrays so that it does not effect the main instance.
 
 ## 14. How would you use of JavaScript reduce()?
 Functional programming way : To find sum of items of an arrow
+
+## 15. Quick Concepts: Do you have experience linting your code?
+How linting works?
+1. Analyzes code
+2. Works with editor
+3. Customizable
+4. Shareable
+
+Popular linters:
+1. JSLint - Douglas Crockford - hard to customize
+2. JSHint - Easily customizable
+3. ESLint - simple
+4. IDEs
+
+What can they do?
+Error detection for:
+1. HTML
+2. JavaScript
+3. CSS/SASS/LESS/PostCSS
+4. Frameworks

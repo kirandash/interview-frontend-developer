@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>14. How would you use of JavaScript reduce()?</title>
+    </head>
+    <body>
+        <h2>14. How would you use of JavaScript reduce()?</h2>
+        <div class="boxes"></div>
+        <script type="text/javascript">
+            (function(){
+                // Chaining map and reduce - increment all the values and then add them
+                let myArr = [2,3,4,5,6];
+                let inc = item => item + 1;
+                let addAll = (acc, item) => acc + item;
+                let total = myArr.map(inc).reduce(addAll);
+                console.log(total); // 25
+            })();
+        </script>
+    </body>
+</html>
