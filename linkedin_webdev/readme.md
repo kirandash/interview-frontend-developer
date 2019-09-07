@@ -95,3 +95,9 @@ https://jsoneditoronline.org/
 IIFE: Immediately invoked function expression = anonymous function + wrapping paranthesis to make it an expression and another pair of paranthesis to invoke it immediately
 1. All functions inside IIFE are creating a closure. Thus having access to enclosed variables only.
 2. Can pass arguments to IIFE function
+
+## 13. How does immutability work in JavaScript?
+1. Immutable: An element is unchangable. For example: const but with arrays and object the values can be changed.
+2. So, immutability is a concept of writing functional program in such a way that the value of original data does not change.
+3. For example: using map instead of forEach to protect data of array from being changed.
+Or clone objects or arrays so that it does not effect the main instance.

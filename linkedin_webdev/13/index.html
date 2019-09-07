@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>13. How does immutability work in JavaScript?</title>
+    </head>
+    <body>
+        <h2>13. How does immutability work in JavaScript?</h2>
+        <div class="boxes"></div>
+        <script type="text/javascript">
+            (function(){
+                // Mutable Arrays
+                let myArray = [3,4,5];
+                console.log(myArray);
+                myArray.forEach(function(item, idx){
+                    myArray[idx] = item + 1;
+                });
+                console.log(myArray);
+
+                // Immutable arrays
+                let myArray2 = [7,8,9];
+                let myArray3 = myArray2.map(function(item){
+                    return item+1;
+                });
+                console.log(myArray2);
+                console.log(myArray3);
+            })();
+        </script>
+    </body>
+</html>
