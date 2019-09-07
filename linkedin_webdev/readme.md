@@ -90,3 +90,8 @@ JSON:
 4. Easy to read and parse
 Tool to visualize JSON in better format:
 https://jsoneditoronline.org/
+
+## 12. How does an IIFE work?
+IIFE: Immediately invoked function expression = anonymous function + wrapping paranthesis to make it an expression and another pair of paranthesis to invoke it immediately
+1. All functions inside IIFE are creating a closure. Thus having access to enclosed variables only.
+2. Can pass arguments to IIFE function
