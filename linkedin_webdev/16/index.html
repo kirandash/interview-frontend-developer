@@ -25,18 +25,19 @@
     <body>
         <h2>16. What are event bubbling and propagation about?</h2>
         <div class="boxes">
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box" id="special"></div>
-            <div class="box"></div>
-            <div class="box"></div>
+            <div class="box box1"></div>
+            <div class="box box2"></div>
+            <div class="box box3" id="special"></div>
+            <div class="box box4"></div>
+            <div class="box box5"></div>
         </div>
         <script type="text/javascript">
             (function(){
                 let node = document.querySelector(".boxes");
                 node.addEventListener("click", function(e){
                     console.log(e);
-                    if(e.target.className === "box"){
+                    //if(e.target.className === "box"){
+                    if(e.target.classList.contains("box")){
                         e.target.parentNode.removeChild(e.target);
                     }
                 }, false); // if true, this will be triggered before the second event
