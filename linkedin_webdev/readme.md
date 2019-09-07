@@ -73,3 +73,12 @@ or let add = function(){} etc.
 4. Parameter rules: (a,b,c) or just a =>  with out paranthesis if only one parameter
 5. Doesn't bind this
 6. new can not be used. So just drop the new.
+
+## 10. How do you use the Fetch API?
+Using Fetch:
+1. Use promises
+2. Simple to use
+3. Full access to features
+4. Parse formats
+5. Lot simpler than XMLHttpRequest()
+

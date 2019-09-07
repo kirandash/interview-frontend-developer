@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>10. How do you use the Fetch API?</title>
+    </head>
+    <body>
+        <h2>10. How do you use the Fetch API?</h2>
+        <button class="load">Load JSON</button>
+        <button class="load2">Load JSON only once</button>
+        <script type="text/javascript">
+            (function(){
+                // Load json on click of button
+                let btn = document.querySelector(".load");
+                btn.addEventListener("click", (e) => {
+                    fetch("MOCK_DATA.json").then(function(response){
+                        return data = response.json(); // fetch provides utility functions like json() which converts the data to JSON format easily
+                        // Fetch here will request json data every time it is clicked
+                    }).then(function(data){
+                        console.log(data);
+                    });
+                });
+
+                // Load json file only once and reuse on click of button - Better approach
+                let request = new Request("MOCK_DATA.json", {
+                    method: "GET"
+                }); // Request is made once on load of page
+                let jsonData = fetch(request).then(function(response){
+                    return data = response.json(); // fetch provides utility functions like json() which converts the data to JSON format easily
+                }); // Request data is fetched and stored in variable
+                let btn2 = document.querySelector(".load2");
+                btn2.addEventListener("click", (e) => {
+                    jsonData.then(function(data){
+                        console.log(data);
+                    }); // Only data is being used on click event
+                });
+            })();
+        </script>
+    </body>
+</html>
