@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>25. CSS variables</title>
+        <style>
+            :root {
+                --grey: #ddd;
+                --gap: 15px;
+                --red: red;
+
+                --btn: {
+                    float: left;
+                    width: 100px;
+                    height: 100px;
+                }
+
+                @custom-media --min (width <= 600px); /* Media query variable */
+                @custom-media --max (width > 600px);
+
+                @custom-selector :--headings h1, h2, h3, h4, h5, h6;
+            }
+
+            :--headings {
+                margin-top: 0;
+                margin-bottom: 1rem;
+                color: var(--red);
+            }
+            body {
+                margin: 0;
+                padding: 0;
+                background: color(var(--red) shade(20%)); /* Color Function */
+            }
+            .box {
+                background: var(--grey);
+                margin: var(--gap);
+                @apply --btn;
+            }
+            @media (--min) {
+                body {
+                    background: black;
+                }
+            }
+            @media (--max) {
+                body {
+                    background: yellow;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h2>25. CSS variables</h2>
+        <div id="boxes">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </body>
+</html>

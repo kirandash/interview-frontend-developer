@@ -231,3 +231,11 @@ npm install node-sass
 
 @mixin backImage($image, $height: 30)
 @include backImage('../image.jpeg')
+
+## 25. CSS variables
+1. Latest feature
+2. Use today with PostCSS. Since wont work with older browsers or IE
+3. Create in :root
+4. Define --yellow, @custom
+5. Use with var(--yellow), @apply
+6. @custom-media and @custom-selector
