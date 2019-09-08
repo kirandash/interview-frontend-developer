@@ -161,3 +161,15 @@ Callbacks:
 2.2 Resolve multiple times
 2.3 Difficult Chaining.
 2.4 No error Propagation
+
+## 20. What is the virtual DOM?
+Traditional DOM:
+1. Document Object Model
+2. Time consuming - Any change in data to reflect on page needs a page reload or DOM modification
+3. Costly - in terms of performance
+Ex: removeChild(), appenChild() : manually remove or add DOM based on data
+Virtual DOM:
+1. Latest technology
+2. Diff DOM & update
+3. Focus on model - DOM automatically updates
+Ex: *ngFor and *ngIf etc - modifies DOM as per data in Angular/React
