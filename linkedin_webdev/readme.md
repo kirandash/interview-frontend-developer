@@ -239,3 +239,5 @@ npm install node-sass
 4. Define --yellow, @custom
 5. Use with var(--yellow), @apply
 6. @custom-media and @custom-selector
+
+## 26. Animate an underline on hover in CSS

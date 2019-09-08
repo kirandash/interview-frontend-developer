@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>26. Animate an underline on hover in CSS</title>
+        <style>
+            ul {
+                padding: 0;
+                margin: 0;
+            }
+            ul li {
+                display: inline-block;
+                position: relative;
+                padding: 10px;
+            }
+            ul li:before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                max-width: 100px;
+                height: 2px;
+                bottom: 0;
+                left: -50%; /* To make sure that animation starts from left. If 0, animation will start from center */
+                background-color: red;
+                opacity: 0;
+                transform: scaleX(0);
+                transition: all 0.3s ease-in-out 0s; /* prop duration anime delay */
+            }
+            ul li:hover:before {
+                opacity: 1;
+                left: 0;
+                transform: scaleX(1);
+            }
+        </style>
+    </head>
+    <body>
+        <h2>26. Animate an underline on hover in CSS</h2>
+        <ul>
+            <li>Text 1</li>
+            <li>Text 1</li>
+            <li>Text 1</li>
+            <li>Text 1</li>
+            <li>Text 1</li>
+        </ul>
+    </body>
+</html>
