@@ -243,3 +243,11 @@ npm install node-sass
 ## 26. Animate an underline on hover in CSS
 transition: all 0.3s ease-in-out 0s;
 left, opacity, transform
+
+## 27. Explain the difference between absolute and relative positioning
+It controls how elements will appear in relation to other elements.
+static, relative, absolute, fixed, sticky, unset, initial, inherit (sticky: does not support in all browsers)
+1. static: not adjustable, normal flow, not relative to anything
+2. relative: adjustable, normal flow, relative to current
+3. absolute: adjustable, removed from flow, relative to parent/doc
+4. Fixed: adjustable, removed from flow, relative to doc
