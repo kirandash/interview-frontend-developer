@@ -180,3 +180,30 @@ Hoisting:
 2. Assignments not hoisted. Only declaration is.
 3. let can be useful. (let and const are not hoisted. Only var is hoisted)
 4. Prefer function declaration over function expression if invoking before or use IIFE
+
+## 22. What tooling options have you used in the past?
+JavaScript Tooling
+1. Tools for dev purpose e.g. minifying css, js, compiling SASS files, running live server, watching file changes
+2. Customizable
+3. Grunt, gulp, webpack
+4. NPM & cli
+
+GruntJS:
+1.1 Task runner: e.g. minifying css, js, compiling SASS files, running live server, watching file changes etc. We can set a default set of tasks to run while running a grunt.js configuration file
+Ex: grunt.registerTask('default', ['concat', 'sass', 'connect', 'watch']);
+grunt.loadNpmTasks('grunt-sass');
+1.2 Uses JSON structure instead of JS functions
+
+GulpJS:
+1. Tasks are JS functions instead of JSON content like Grunt
+2. Thus easier to use. Better functionality
+3. Simple setup and faster
+4. Gulp uses the concept of stream. It runs each task separately and handles them in memory.
+
+WebPack:
+1. Popular recently because of modular approach by Angular etc.
+2. Modular focus. Thus popular in angular etc
+3. Individual processing.
+4. Independent processing of modules unlike gruntJS.
+5. Advanced features
+6. Complex and powerful
