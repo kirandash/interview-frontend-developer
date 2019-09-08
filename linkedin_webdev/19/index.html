@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>19. What is the relationship between promises and callbacks?</title>
+    </head>
+    <body>
+        <h2>19. What is the relationship between promises and callbacks?</h2>
+        <button id="loadJson">Load JSON Files</button>
+        <script type="text/javascript">
+            (function(){
+                function loadJson(url){
+                    return new Promise(function(resolve, reject){
+                        let request = new XMLHttpRequest();
+                        console.log(`Getting url: ${url}`);
+                        request.open("GET", url);
+                        request.onreadystatechange = function(){
+                            if(request.readyState == 4){
+                                if(request.status == 200){
+                                    // data = request.responseText;
+                                    // Pass data with resolve to then statement
+                                    resolve(JSON.parse(request.responseText));
+                                }else{
+                                    reject(Error('Problem loading data!'));
+                                }
+                            }
+                        }
+                        request.send();
+                    });
+                }
+
+                let md = loadJson("MOCK_DATA.json");
+                let md2 = loadJson("MOCK_DATA_TWO.json"); // Executed on page load and ready for use
+
+                let node = document.querySelector("#loadJson");
+                
+                node.addEventListener("click", function(e){
+                    // then accepts two fn arguments : one for success and one for failure
+                    md.then(function(data){
+                        console.log(data);
+                        return md2; // This will call md2 and return the resolved data to next then loop
+                    }, function(error){
+                        console.log(error);
+                    }).then(function(data){
+                        console.log(data);
+                    }, function(error){
+                        console.log(error);
+                    }); // md2 is called only on successful completion of md
+                });
+            })();
+        </script>
+    </body>
+</html>

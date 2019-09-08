@@ -149,3 +149,15 @@ Callbacks:
 1. Executed asynchronously
 2. Often tied to events
 3. Uses anonymous functions
+
+## 19. What is the relationship between promises and callbacks?
+1. Promises: Objects in JS that describes what to happen when a time based operation happens. Provides better readability and easy to use for asyncronous calls.
+1.1 Execution guarantee.
+1.2 Resolve only once. : Can succeed or fail only once. Not more
+1.3 Easier Chaining. : Promise chain will stop if there is any error.
+1.4 Error Propagation: If error happens any where it is going to stop
+2. Callbacks: Functions passed as arguments. Asynchronous. Problems: not clear.
+2.1 Execution not guarantee.
+2.2 Resolve multiple times
+2.3 Difficult Chaining.
+2.4 No error Propagation
