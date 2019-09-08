@@ -218,3 +218,16 @@ Will loop until system runs out of memory.
 3. Recursions are useful when your result is dependent on previous results e.g. creating fibonacci sequence.
 4. Usually a loop that runs backwards, till it reaches the base case
 5. Not much used. But fancier way to deal with loops. Also can be done with other loops eg for loop
+
+## 24. Can you build a Sass mixin?
+SASS (Syntactically Awesome StyleSheet)
+SASS Mixins:
+1. Functions
+2. Take arguments
+3. Initialized with defaults
+
+npm init
+npm install node-sass
+
+@mixin backImage($image, $height: 30)
+@include backImage('../image.jpeg')
