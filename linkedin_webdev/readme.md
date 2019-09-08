@@ -207,3 +207,14 @@ WebPack:
 4. Independent processing of modules unlike gruntJS.
 5. Advanced features
 6. Complex and powerful
+
+## 23. When would you use recursion?
+1. Recursion happens anytime a function calls itself.
+function a(){
+    a();
+}
+Will loop until system runs out of memory.
+2. Needs base case. e.g. a condition to call the function. not always.
+3. Recursions are useful when your result is dependent on previous results e.g. creating fibonacci sequence.
+4. Usually a loop that runs backwards, till it reaches the base case
+5. Not much used. But fancier way to deal with loops. Also can be done with other loops eg for loop

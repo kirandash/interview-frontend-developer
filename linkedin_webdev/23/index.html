@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>23. When would you use recursion?</title>
+    </head>
+    <body>
+        <h2>23. When would you use recursion?</h2>
+        <div class="boxes"></div>
+        <script type="text/javascript">
+            (function(){
+                // Create a fibonacci array till 8 counts using recursion
+                let fibbi = function(count){
+                    if(count == 1) return [0,1]; // 1. Base case - or final end call
+                    var arr = fibbi(count-1); // 2. recursive call - all calls will be stacked up until count is 1 and then arr is set to [0,1] and all the stacked up call occurs for below written statements in a loop
+                    // 3. Tasks to do in loop
+                    sum = arr[arr.length-1] + arr[arr.length-2];
+                    arr.push(sum);
+                    console.log(arr);
+                    return arr; // End of step 3
+                };
+                fibbi(8);
+            })();
+        </script>
+    </body>
+</html>
