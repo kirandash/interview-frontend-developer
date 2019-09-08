@@ -173,3 +173,10 @@ Virtual DOM:
 2. Diff DOM & update
 3. Focus on model - DOM automatically updates
 Ex: *ngFor and *ngIf etc - modifies DOM as per data in Angular/React
+
+## 21. What is variable hoisting and how do you guard against it?
+Hoisting:
+1. JS Moves declaration: variables and function declarations are moved to the top before executing the code.
+2. Assignments not hoisted. Only declaration is.
+3. let can be useful. (let and const are not hoisted. Only var is hoisted)
+4. Prefer function declaration over function expression if invoking before or use IIFE

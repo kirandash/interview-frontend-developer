@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>21. What is variable hoisting and how do you guard against it?</title>
+        <style>
+            .box {
+                width: 100px;
+                height: 100px;
+                background: blue;
+                margin: 10px;
+                float: left;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>21. What is variable hoisting and how do you guard against it?</h2>
+        <div class="boxes"></div>
+        <script type="text/javascript">
+            (function(){
+                var totalBoxes = 12;
+                createBoxes(totalBoxes);
+
+                // Use function declarations only so that it can be invoked before in code. If expression is used then it will throw error
+                // let createBoxes = function(total = 4){
+                function createBoxes(total = 4){
+                    let node = document.querySelector(".boxes");
+                    // console.log(i);
+                    // console.log(box); // not defined since let is used
+                    for(let i=0; i < total; i++){
+                        let box = document.createElement("div");
+                        box.className = 'box';
+                        node.appendChild(box);
+                    }
+                }
+                // IIFE approach
+                (function createBoxes(total = 4){
+                    let node = document.querySelector(".boxes");
+                    // console.log(i);
+                    // console.log(box); // not defined since let is used
+                    for(let i=0; i < total; i++){
+                        let box = document.createElement("div");
+                        box.className = 'box';
+                        node.appendChild(box);
+                    }
+                })(14);
+            })();
+        </script>
+    </body>
+</html>
