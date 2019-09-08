@@ -251,3 +251,19 @@ static, relative, absolute, fixed, sticky, unset, initial, inherit (sticky: does
 2. relative: adjustable, normal flow, relative to current
 3. absolute: adjustable, removed from flow, relative to parent/doc
 4. Fixed: adjustable, removed from flow, relative to doc
+
+## 28. How comfortable are you with Sass?
+SASS: Popular CSS pre-processor
+Syntactically awesome stylesheets
+1. .scss vs .sass: .scss is more popular and latest. Has syntax similar to css. .sass has difficult syntax where tab and spaces are relevant
+2. Ruby vs nodesass : Ruby is traditional way but nodesass is a nice npm module and popular
+npm init
+npm install node-sass
+3. Variables, nesting, partials and mixins
+4. Paritals: @import "base"; file name: _base.scss; @import "mixins"; file name: _mixins.scss
+5. Variables: $red: red; color: $red;
+6. Nesting: In normal CSS, media query can be nested.
+Similarly, in scss every parent child can be nested.
+.nav { .... ul { ... li { ....&.active{  } } } }
+&. to be used for sibling
+7. Mixins: @background($image, $space = 15px){ ..... }; @include @background('a.jpeg', 15);
