@@ -241,3 +241,5 @@ npm install node-sass
 6. @custom-media and @custom-selector
 
 ## 26. Animate an underline on hover in CSS
+transition: all 0.3s ease-in-out 0s;
+left, opacity, transform
