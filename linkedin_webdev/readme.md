@@ -267,3 +267,13 @@ Similarly, in scss every parent child can be nested.
 .nav { .... ul { ... li { ....&.active{  } } } }
 &. to be used for sibling
 7. Mixins: @background($image, $space = 15px){ ..... }; @include @background('a.jpeg', 15);
+
+## 29. How do you animate CSS?
+1. Defining a sequence
+@keyframes animationName {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 0; }
+}
+2. Applying properties:
+animation-name, animation-duration, animation-timing-function, animation-delay, animation-iteration-count etc.
