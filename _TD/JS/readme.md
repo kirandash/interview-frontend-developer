@@ -1,17 +1,19 @@
 ## JavaScript Interview Questions (TestDome)
-01. Ensure
+### 01. Ensure
 Ensure - value is not undefined with try catch
 if(value === undefined){
     throw new Error('No value assigned!');
 }
 return value;
-02. Remove Property from Object
+
+### 02. Remove Property from Object
 if(obj.hasOwnProperty(prop)){
     delete obj[prop];
     return true;
 }
 return false;
-03. Date M/D/YYYY to YYYYMMDD
+
+### 03. Date M/D/YYYY to YYYYMMDD
 Sol 1:
 let myDate = new Date(userDate);
 let y = myDate.getFullYear().toString();
@@ -28,3 +30,11 @@ let y = myDate[2];
 if(m.length == 1) m = "0" + m;
 if(d.length == 1) d = "0" + d;
 return y+m+d;
+
+### 04. Remove image from gallery - click add event listener
+let removeLink = document.getElementsByClassName('remove');
+for (var i = 0; i < removeLink.length; i++) {
+    removeLink[i].addEventListener('click', function () {
+        this.parentNode.remove();
+    });
+}
