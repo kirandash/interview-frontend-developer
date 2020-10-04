@@ -1,4 +1,4 @@
-# React Interview QAs (Latest v: 16.13.1) - TS
+# React Interview QAs (Latest v: 16.13.1)
 ## Part 1
 ### Q1. Name Life Cycle Methods and their Purpose
 Ans: Lifecycle methods are changing. In new React, react hook uses useEffect to handle lifecycle methods. While the conventional class based approach has the following methods: under 3 stages (render, update/re-render and unmount)
