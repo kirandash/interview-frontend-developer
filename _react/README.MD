@@ -287,3 +287,6 @@ Steps:
     - Frequently upgrade every 6 months and upgrade taking a week
 9. Incorrect proptypes
     - Ex: string vs number `<comp x="2">` here we are passing string. `<comp x={2}>` while here it is being passed as number.
+
+### Q27. Styled components does not accept true or false for property check. Use 1 or 0 instead.
+https://github.com/styled-components/styled-components/issues/1198
