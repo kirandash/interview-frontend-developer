@@ -1,3 +1,4 @@
+// Repeated characters in a string
 (function(){
     function repeatation(char, string){
         // Repeated characters in a string
