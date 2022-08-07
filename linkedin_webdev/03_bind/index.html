@@ -11,13 +11,13 @@
                     return console.log(this.name);
                 }
             };
-            myModule.getName(); // Here method is being used from objects name so object myModule is taken as reference
-            var someName = myModule.getName.bind({name:"Bulbul"}); // Here the custom object is being bind
-            someName();
+            myModule.getName(); // Kiran // Here method is being used from objects name so object myModule is taken as reference
+            var someName = myModule.getName.bind({name:"Bulbul"});  // Here the custom object is being bind
+            someName(); // Bulbul
             var someName2 = myModule.getName;
-            someName2(); // Here object is window, thus window object.name will be the output. probably empty
+            someName2(); // empty // Here object is window, thus window object.name will be the output. probably empty
             var someName3 = myModule.getName.bind(myModule);
-            someName3();
+            someName3(); // Kiran
         </script>
     </body>
 </html>

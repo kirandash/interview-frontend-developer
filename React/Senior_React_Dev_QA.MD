@@ -28,7 +28,7 @@
 
 * When do you use component based testing and why?
   * Bad: "I use Enzyme and I try to test all my components"
-  * Good: "I use Enzyme but only for generic components since I use UI testing mostly"
+  * Good: "I use Enzyme/RTL but only for generic components since I use UI testing with Cypress/Selenium mostly"
 
 * Do you use TDD and how?
   * Bad: "I use TDD as much as I can"

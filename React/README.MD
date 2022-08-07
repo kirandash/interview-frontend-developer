@@ -71,22 +71,27 @@ Ans: It is similar to catch block in try, catch blocks from JavaScript.
 Ans: `componentDidMount`: Calling API will return some results and therefore will change state. Means, the DOM must already be ready before we get the new data from API. 
 
 ### Q7. React Patterns
+- https://javascriptpatterns.vercel.app/patterns/react-patterns/conpres
 1. **Context-API pattern:**
     - When we pass props to a deeply nested components, it is difficult. To solve that issue we have context. We can wrap our component with a special tag. And then we have a provider and a consumer. 
     - Provider component is higher in the tree that provides props via value attribute.
     - Consumer component is used to receive the props in child component.
 2. **render props**
-    - Using children as functions. So instead of passing components inside components. We pass functions in a class based component. Functions are re-usable.
-3. **presentation component pattern**
+    - With the Render Props pattern, we pass components as props to other components. The components that are passed as props can in turn receive props from that component.
+3. **Container / presentation component pattern**
     - The component whose primary job is to present something for just look and feel are written as stateless functional components.
     - On the other hand, components that holds more logic and decide how things work are written as stateful or class components.
-
+4. HOC Pattern
+    - Higher-Order Components (HOC) make it easy to pass logic to components by wrapping them.
+5. Hooks Pattern
+6. Compound pattern
 ### Q8. Why would you use React in your project?
 Ans: Factors to consider:
 - Project deadline: time to learn and implement. Plus if no major changes are upcoming in next releases.
 - Compared to Angular and amber: Which are easy to configure but hard to use. They come in huge package. Ex: Angular comes with Angular CLI, router, testing all pre configured and ready to use. Thus angular is heavy. But react is much **light weight**. So for quick projects - better to go for Angular. While for Large projects with more scalability and better performance, it is better to go with React. But we will have to make a lot of decision on what to use and configure accordingly. And if we make a wrong decision we might have to pay the price.
 - React is more **functional programming**. Thus better for JS savvy engineers.
 - While in Angular: we have to remember a **lot of syntax**. But in React there isn't more of additional syntaxes. It is more aligned with JavaScript.
+- Angular has **two way binding** which might be difficult to debug sometimes. React is one way binding or flux model. Easy to debug
 
 ### Q9. CSS-IN-JS pattern in React?
 Ans: CSS is global. And can easily impact different places if not done carefully. Solution: 
@@ -221,7 +226,7 @@ Ans: Adds a middle layer.
 - There are 3 Stages of lifecycle:
     1. **initial render**
         - getDerivedStateFromProps
-            - u`seEffect( () => {}, [prop1, prop2])`
+            - `useEffect( () => {}, [prop1, prop2])`
         - componentDidMount
             - `useEffect( () => {}, [] )`: Runs on initial render and update
     2. **updates**

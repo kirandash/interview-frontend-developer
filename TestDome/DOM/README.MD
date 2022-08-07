@@ -1,0 +1,1 @@
+### 01. Remove image from gallery - click add event listener
